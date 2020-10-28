@@ -15,7 +15,7 @@ INSTALL_PATH=$(realpath -s --canonicalize-missing $INSTALL_PATH)
 
 if [ "$CONFIRM_INSTALL_PATH" != "${CONFIRM_INSTALL_PATH#[Yy]}" ] ;then
     echo "updating apache2 default virtual host for directory ${INSTALL_PATH} ..."
-    sed -i "s/^Document Root.*/Document Root ${INSTALL_PATH}/" /etc/apache2/sites-available/000-default.conf
+    sed -i "s|^DocumentRoot.*|DocumentRoot ${INSTALL_PATH}|" /etc/apache2/sites-available/000-default.conf
     echo "restarting apache2 ..."
     systemctl restart apache2
 else
