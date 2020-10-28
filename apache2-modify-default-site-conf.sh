@@ -2,7 +2,6 @@
 
 if [ -z "$1" ]
     then
-        read INSTALL_PATH
         echo -e "\e[32mconfirm defaut site path to ${INSTALL_PATH}, Do you want to continue? [Y/n] \e[39m"
         read CONFIRM_INSTALL_PATH
     else
