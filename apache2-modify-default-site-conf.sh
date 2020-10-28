@@ -2,6 +2,8 @@
 
 if [ -z "$1" ]
     then
+        echo -e "\e[32menter the default path you would like to use... \e[39m"
+        read INSTALL_PATH
         echo -e "\e[32mconfirm defaut site path to ${INSTALL_PATH}, Do you want to continue? [Y/n] \e[39m"
         read CONFIRM_INSTALL_PATH
     else
